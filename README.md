@@ -1,3 +1,5 @@
+Demo: https://simpleloader.netlify.app/
+
 # simple-loader
 Simple Loader Made Only With HTML &amp; CSS. Demo 👇
 This can be used without JavaScript.
