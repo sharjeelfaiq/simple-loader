@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    div {
-        border: 50px solid #ddd;
-        border-top: 50px solid #000;
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
-        animation: loader 3s linear infinite;
-    }
-
-    @keyframes loader {
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-<body>
-    <div></div>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>JS Bin</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <h3>Set Size</h3>
+            <button onclick="set_size(50)">50px</button>
+            <button onclick="set_size(150)">150px</button>
+            <button onclick="set_size(250)">250px</button>
+            <button onclick="set_size(350)">350px</button>
+            <button onclick="set_size(450)">450px</button>
+            <button onclick="set_size(550)">550px</button>
+        </div>
+        <div style="margin: 10px 0px">
+            <button onclick="increase_size()">Increase Size</button>
+            <button onclick="decrease_size()">Decrease Size</button>
+        </div>
+        <div style="margin: 10px 0px">
+            <h3 title="Default Rotation: Clockwise">Set Rotation</h3>
+            <button onclick="clockwise()">Clockwise</button>
+            <button onclick="anti_clockwise()">Anti-clockwise</button>
+        </div>
+        <div class="container">
+            <div class="loader" id="loader"></div>
+            <div
+                class="loader-background"
+                id="loader-background"
+            ></div>
+        </div>
+    </body>
 </html>

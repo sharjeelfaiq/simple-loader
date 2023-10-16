@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 5px solid #ddd;
+    border-top: 5px solid #000;
+    border-radius: 50%;
+    outline: none;
+    height: 150px;
+    width: 150px;
+    animation: loader 3s linear infinite;
+}
+
+.loader-background {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: url(https://i.ibb.co/Z1ntpzT/images.png);
+    background-size: cover;
+    position: absolute;
+    animation: fade 3s linear infinite alternate; /* Apply the fade animation */
+    opacity: 0; /* Set initial opacity to 0 */
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0; /* Start with 0 opacity */
+    }
+    50% {
+        opacity: 1; /* Reach full opacity at 50% of the animation */
+    }
+    100% {
+        opacity: 0; /* Go back to 0 opacity at the end of the animation */
+    }
+}
