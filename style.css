@@ -1,3 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body {
+    margin: 20px;
+}
+
+button {
+    padding: 5px 8px;
+    font-size: 15px;
+    font-weight: regular;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightslategray;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: center;
