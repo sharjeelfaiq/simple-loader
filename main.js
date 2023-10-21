@@ -1,12 +1,21 @@
+const loader_styles = window.getComputedStyle(loader);
+let loader_width = loader_styles.width;
+const loader_width_display = document.querySelector(".display-loader-width");
+loader_width_display.innerHTML = "Loader width: " + loader_width;
+console.log(loader_width);
+
 function set_size(width_param) {
     const loader = document.getElementById("loader");
     const loader_background = document.getElementById("loader-background");
+    const loader_width_display = document.querySelector(".display-loader-width");
     if (width_param === 50) {
         loader.style.width = 50 + "px";
         loader.style.height = 50 + "px";
         loader.style.borderWidth = "2px";
         loader_background.style.width = 050 + "px";
         loader_background.style.height = 050 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
     else if (width_param === 150) {
         loader.style.width = 150 + "px";
@@ -14,6 +23,8 @@ function set_size(width_param) {
         loader.style.borderWidth = "4px";
         loader_background.style.width = 150 + "px";
         loader_background.style.height = 150 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
     else if (width_param === 250) {
         loader.style.width = 250 + "px";
@@ -21,6 +32,8 @@ function set_size(width_param) {
         loader.style.borderWidth = "6px";
         loader_background.style.width = 250 + "px";
         loader_background.style.height = 250 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
     else if (width_param === 350) {
         loader.style.width = 350 + "px";
@@ -28,6 +41,8 @@ function set_size(width_param) {
         loader.style.borderWidth = "8px";
         loader_background.style.width = 350 + "px";
         loader_background.style.height = 350 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
     else if (width_param === 450) {
         loader.style.width = 450 + "px";
@@ -35,6 +50,8 @@ function set_size(width_param) {
         loader.style.borderWidth = "10px";
         loader_background.style.width = 450 + "px";
         loader_background.style.height = 450 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
     else if (width_param === 550) {
         loader.style.width = 550 + "px";
@@ -42,12 +59,15 @@ function set_size(width_param) {
         loader.style.borderWidth = "12px";
         loader_background.style.width = 550 + "px";
         loader_background.style.height = 550 + "px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
+        console.log(loader.style.width);
     }
 }
 
 function increase_size() {
     const loader = document.getElementById("loader");
     const loader_background = document.getElementById("loader-background");
+    const loader_width_display = document.querySelector(".display-loader-width");
 
     let loader_style = window.getComputedStyle(loader);
     let loader_background_style = window.getComputedStyle(loader);
@@ -64,22 +84,29 @@ function increase_size() {
 
     if (loader_width < 150) {
         loader.style.borderWidth = "2px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 250) {
         loader.style.borderWidth = "4px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 350) {
         loader.style.borderWidth = "6px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 450) {
         loader.style.borderWidth = "8px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 550) {
         loader.style.borderWidth = "10px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width >= 550) {
         loader.style.borderWidth = "12px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     }
 }
 
 function decrease_size() {
     const loader = document.getElementById("loader");
     const loader_background = document.getElementById("loader-background");
+    const loader_width_display = document.querySelector(".display-loader-width");
 
     let loader_style = window.getComputedStyle(loader);
     let loader_background_style = window.getComputedStyle(loader);
@@ -96,16 +123,22 @@ function decrease_size() {
 
     if (loader_width < 150) {
         loader.style.borderWidth = "2px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 250) {
         loader.style.borderWidth = "4px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 350) {
         loader.style.borderWidth = "6px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 450) {
         loader.style.borderWidth = "8px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width < 550) {
         loader.style.borderWidth = "10px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     } else if (loader_width >= 550) {
         loader.style.borderWidth = "12px";
+        loader_width_display.innerHTML = "Loader width: " + loader.style.width;
     }
 }
 
