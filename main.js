@@ -2,6 +2,10 @@ const loader_styles = window.getComputedStyle(loader);
 let loader_width = loader_styles.width;
 const loader_width_display = document.querySelector(".display-loader-width");
 loader_width_display.innerHTML = "Loader width: " + loader_width;
+
+const rotationDirection = document.querySelector(".rotation-direction");
+rotationDirection.innerHTML = "Rotation direction: Clockwise";
+
 console.log(loader_width);
 
 function set_size(width_param) {
@@ -146,10 +150,14 @@ function clockwise() {
     const clockwise_rotation = "loader 3s linear infinite";
     const loader = document.getElementById("loader");
     loader.style.animation = clockwise_rotation;
+    const rotationDirection = document.querySelector(".rotation-direction");
+    rotationDirection.innerHTML = "Rotation direction: Clockwise";
 }
 
 function anti_clockwise() {
     const anti_clockwise_rotation = "loader 3s linear infinite reverse";
     const loader = document.getElementById("loader");
     loader.style.animation = anti_clockwise_rotation;
+    const rotationDirection = document.querySelector(".rotation-direction");
+    rotationDirection.innerHTML = "Rotation direction: Anti-clockwise";
 }

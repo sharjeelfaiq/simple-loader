@@ -25,6 +25,11 @@ button:hover {
     color: #fff;
 }
 
+button:active {
+    background-color: none;
+    color: #000;
+}
+
 h1 {
     text-align: center;
 }
